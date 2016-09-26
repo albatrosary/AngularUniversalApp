@@ -9,12 +9,6 @@ import { Component } from '@angular/core';
     <li><a routerLink="home" routerLinkActive="active">Home</a></li>
     <li><a routerLink="about" routerLinkActive="active">About</a></li>
   </ul>
-  <hr>
-  <ul>
-    <li><a routerLink="a" routerLinkActive="active">A Component</a></li>
-    <li><a routerLink="b" routerLinkActive="active">B Component</a></li>
-    <li><a routerLink="c" routerLinkActive="active">C Component</a></li>
-  </ul>
   <router-outlet></router-outlet>
   `
 })
@@ -23,15 +17,34 @@ export class App {
 }
 
 @Component({
+  selector: 'default',
+  template: ``
+})
+export class Default {
+
+}
+
+@Component({
   selector: 'home',
-  template: 'Home component'
+  template: `
+  Home component
+  <ul>
+    <li><a routerLink="a" routerLinkActive="active">A Component</a></li>
+    <li><a routerLink="b" routerLinkActive="active">B Component</a></li>
+  </ul>
+  `
 })
 export class Home {
 
 }
 @Component({
   selector: 'about',
-  template: 'About component'
+  template: `
+  About component
+  <ul>
+    <li><a routerLink="c" routerLinkActive="active">C Component</a></li>
+  </ul>
+  `
 })
 export class About {
 

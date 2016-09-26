@@ -5,10 +5,9 @@ import { AComponent, AaComponent, AbComponent, AcComponent } from './a.component
 
 const aRoutes: Routes = [
   { 
-    path: 'a',
+    path: 'home',
     component: AComponent,
     children: [
-    { path: '', redirectTo: 'a', pathMatch: 'full'},
     { path: 'a', component: AaComponent },
     { path: 'b', component: AbComponent },
     { path: 'c', component: AcComponent }

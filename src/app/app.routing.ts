@@ -1,11 +1,11 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Home, About } from './app'
+import { Home, About, Default } from './app';
 
 /* Invalid configuration of route 'a': redirectTo and children cannot be used together */
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '', component: Default, pathMatch: 'full' },
   { path: 'home', component: Home},
   { path: 'about', component: About}
 ];

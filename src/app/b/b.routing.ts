@@ -6,10 +6,9 @@ import { BComponent, BaComponent, BbComponent, BcComponent } from './b.component
 
 const bRoutes: Routes = [
   {
-    path: 'b',
+    path: 'home',
     component: BComponent,
     children: [
-    { path: '', redirectTo: 'b', pathMatch: 'full'},
     { path: 'a', component: BaComponent },
     { path: 'b', component: BbComponent },
     { path: 'c', component: BcComponent }

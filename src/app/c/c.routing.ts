@@ -5,7 +5,7 @@ import { CComponent, CaComponent, CbComponent } from './c.component'
 import { DComponent, DaComponent, DbComponent } from './d.component'
 
 const aRoutes: Routes = [
-  { path: 'c', component: CComponent, children: [
+  { path: 'about', component: CComponent, children: [
     { path: '', redirectTo: 'a', pathMatch: 'full'},
     { path: 'a', component: CaComponent },
     { path: 'b', component: CbComponent }

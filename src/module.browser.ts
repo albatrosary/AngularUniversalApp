@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { UniversalModule } from 'angular2-universal';
 
-import { App, Home, About } from './app/app';
+import { App, Home, About, Default } from './app/app';
 
 import { AModule } from './app/a/a.module';
 import { BModule } from './app/b/b.module';
@@ -15,13 +15,13 @@ import { CModule } from './app/c/c.module';
     AModule, BModule, CModule, 
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: Home, pathMatch: 'full' },
+      { path: '', component: Default, pathMatch: 'full' },
       { path: 'home', component: Home},
       { path: 'about', component: About}
     ])
   ],
   bootstrap: [ App ],
-  declarations: [ App, Home, About ]
+  declarations: [ App, Home, About, Default ]
 })
 export class MainModule {
   constructor() {
